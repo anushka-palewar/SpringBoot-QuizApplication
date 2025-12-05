@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 
 public interface QuestionService {
 	
-	 public ResponseEntity<List<Question>> getAllQuestions();
+	public ResponseEntity<List<Question>> getAllQuestions();
 
 	public ResponseEntity<List<Question>> getQuestionsByCategory(String Category);
 
