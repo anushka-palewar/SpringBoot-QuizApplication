@@ -13,5 +13,6 @@ public interface QuestionService {
 	public ResponseEntity<List<Question>> getQuestionsByCategory(String Category);
 
 	public ResponseEntity<String> addQuestion(Question question);
-	
+
+	public ResponseEntity<List<Question>> getQuestionsBydifficultyLevel(String difficultyLevel);
 }

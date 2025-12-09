@@ -39,5 +39,4 @@ public class QuizController {
 	        @RequestBody List<Response> responses) {
 	    return quizService.calculateResult(id, responses);
 	}
-
 }

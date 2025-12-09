@@ -43,4 +43,15 @@ public class QuestionServiceImpl implements QuestionService{
 		return new ResponseEntity<String>("success",HttpStatus.CREATED);
 	}
 
+	@Override
+	public ResponseEntity<List<Question>> getQuestionsBydifficultyLevel(String difficultyLevel) {
+		try {
+			return new ResponseEntity<>(questionRepo.findBydifficultyLevel(difficultyLevel), HttpStatus.OK);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
+	}
+
+
 }

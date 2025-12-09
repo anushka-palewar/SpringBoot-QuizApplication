@@ -33,4 +33,9 @@ public class QuestionController {
 	public ResponseEntity<String> addQuestion(@RequestBody Question question) {
 		return questionService.addQuestion(question);
 	}
+	
+	@GetMapping("/difficultyLevel/{difficultyLevel}")
+	public ResponseEntity<List<Question>> getQuestionsBydifficultyLevel(@PathVariable String difficultyLevel) {
+		return questionService.getQuestionsBydifficultyLevel(difficultyLevel);
+	}
 }

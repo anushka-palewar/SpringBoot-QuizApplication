@@ -15,5 +15,4 @@ public interface QuizService {
 
 	ResponseEntity<Integer> calculateResult(Integer id, List<Response> responses);
 
-
 }

@@ -18,5 +18,7 @@ public interface QuestionRepo extends JpaRepository<Question, Integer> {
             @Param("category") String category,
             @Param("noOfQue") int noOfQue
     );
+    
+    List<Question> findBydifficultyLevel(String difficultyLevel);
 }
 
